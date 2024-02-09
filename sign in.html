@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>sign in</title>
+        <link rel="stylesheet" href="sign in.css">
+    </head>
+    <body>
+       
+        <div class="container">
+            <div class="forms-container">
+                <div class="signin">
+                    <form name="sign-in-form" onsubmit= "return test()" action="index.html" >
+                        <h2 class="title">sign in</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" for="f" name="fn" placeholder="Username"/>
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" for="p" name="pss" placeholder="password"/>
+                        </div>
+                        <a href="#" class="forgot-pass">Forgot Password</a><br>
+                        <input type="submit" class="btn solid" value="login"><br>
+                        <span>Already have an account? <a href="sign up.html" class="signup-link">Sign Up</a></span>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="panels-container"></div>
+
+        </div>
+
+
+
+
+
+        <script>
+            function test(){
+                var arr = ["Nayera","Noha","Noura","Esraa","Mariam"];
+                var pass = ["12345","34553","56786","78935","88886"];
+                var name = document.forms["sign-in-form"]["fn"].value;
+                var pa = document.forms["sign-in-form"]["pss"].value;
+                for(var i=0; i<arr.length; i++){
+                    if((name == arr[i])&&(pa = pass[i]))
+                    return true;
+                    else if((name == " ") || (pa == " ")){
+                        alert("error");
+                      
+                    }
+                }
+                return false;
+            }
+        </script>
+    </body>
+</html>
